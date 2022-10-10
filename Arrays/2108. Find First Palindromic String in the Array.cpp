@@ -35,3 +35,28 @@ public:
          return "";
     }
 };
+
+
+//Optimization 
+class Solution {
+public:
+
+  bool checkPalindrome(string word){
+          string temp=word;
+          reverse(temp.begin(),temp.end());
+          if(temp==word) return true;
+          else return false;
+         
+    }
+
+
+    string firstPalindrome(vector<string>& words) {
+
+        for (int i=0;i<words.size();i++){
+            if(checkPalindrome(words[i])){
+             return words[i];
+            }
+        }
+         return "";
+    }
+};
